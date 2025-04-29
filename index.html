@@ -3,21 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- bootswatch -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/darkly/bootstrap.rtl.min.css" integrity="sha512-bDXFao8syK87+SNw6XmqzBHeOv5r2t24grOk1K8omUKaOaZUq3jAC75+h2XDCJtFzUeCATicnSt+iH+NEG8mQg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>HTML Form</title>
 </head>
 <body>
-    <div class="titulo">
-        <h4 class="text-black">Instagram</h4>
-        <i class="fa-brands fa-instagram fa-xl"></i>
+    <div class="container-fluid">
+        <nav class="navbar bg-body-tertiary">
+            <div class="d-flex w-100 justify-content-between ">
+                <div class="d-flex align-items-center m-2 ">
+                    <i class="fa-brands fa-instagram fa-2xl m-1"></i>
+                    <a class="navbar-brand " href="#">Instagram</a>
+                </div>
+                <!-- Button trigger modal -->
+                <div>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Create a new post
+                    </button>
+                    <!-- dropdown -->
+                    <div class="btn-group justify-content-end m-50">
+                        <button type="button" class="btn btn-secondary"><i class="fa-solid fa-gear"></i></button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p> Caption:</p>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Example
+                                            textarea</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                            rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="container-fluid">
+                                        <button type="button" class="btn btn-light"> <i
+                                                class="fa-solid fa-camera fa-lg"></i></button>
+                                        <button type="button" class="btn btn-light"> <i
+                                                class="fa-solid fa-location-dot fa-lg"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navs & Tabs -->
+        <nav>
+            <div class="nav nav-tabs justify-content-center border-0" id="nav-tab" role="tablist">
+                <button class="nav-link active border-0" id="nav-home-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                    <i class="fa-solid fa-table-cells text-primary"></i>
+                </button>
+                <button class="nav-link border-0" id="nav-profile-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                    aria-selected="false">
+                    <i class="fa-solid fa-square"></i>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content border border-0" id="nav-tabContent">
+            <div class="tab-pane fade show active border-0" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                tabindex="0">
+                <div class="row">
+                    <div class="col-4 p-0  m-0 border-0">
+                        <img src="https://images.pexels.com/photos/15794920/pexels-photo-15794920/free-photo-of-cachorro-border-collie.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail border-0" alt="...">
+                    </div>
+                    <div class="col-4 p-0 m-0 border-0">
+                        <img src="https://images.pexels.com/photos/31820107/pexels-photo-31820107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail border-0" alt="...">
+                    </div>
+                    <div class="col-4 p-0  m-0 border-0">
+                        <img src="https://images.pexels.com/photos/15794775/pexels-photo-15794775/free-photo-of-hermoso-border-collie.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail border-0" alt="...">
+                    </div>
+                    <div class="col-4 p-0 m-0 border-0">
+                        <img src="https://images.pexels.com/photos/17111917/pexels-photo-17111917/free-photo-of-montanas-cielo-punto-de-referencia-romantico.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail border-0" alt="...">
+                    </div>
+                    <div class="col-4 p-0  m-0 border-0">
+                        <img src="https://images.pexels.com/photos/4132600/pexels-photo-4132600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail border-0" alt="...">
+                    </div>
+                    <div class="col-4 p-0 m-0 border-0">
+                        <img src="https://images.pexels.com/photos/20887783/pexels-photo-20887783/free-photo-of-mar-naturaleza-oceano-rocas.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail border-0" alt="...">
+                    </div>
+                    <div class="col-4 p-0  m-0 border-0">
+                        <img src="https://images.pexels.com/photos/16924395/pexels-photo-16924395/free-photo-of-montanas-pared-muro-vintage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail border-0" alt="...">
+                    </div>
+                    <div class="col-4 p-0 m-0 border-0">
+                        <img src="https://images.pexels.com/photos/18004059/pexels-photo-18004059/free-photo-of-caballo-comiendo-en-libertad.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail border-0" alt="...">
+                    </div>
+                    <div class="col-4 p-0 m-0 border-0">
+                        <img src="https://images.pexels.com/photos/31826920/pexels-photo-31826920/free-photo-of-barcos-pesqueros-atracados-en-el-puerto-de-mar-del-plata.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail border-0" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                <div class="row d-flex justify-content-center g-20">
+                    <div class="col-6 d-flex justify-content-center">
+                        <div class="content">
+                            <!--card 1 -->
+                            <div class="card m-3" style="width: 35rem;">
+                                <div class="content d-flex justify-content-between m-3">
+                                    <h5 class="mb-0 justify-content-start">Little Toby</h5>
+                                    <span class="justify-content-end">10/07</span>
+                                </div>
+                                <img src="https://images.pexels.com/photos/15794920/pexels-photo-15794920/free-photo-of-cachorro-border-collie.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="fw-bold">204 Likes</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Similique,
+                                        id. </p>
+                                </div>
+                            </div>
+                            <!--card 2 -->
+                            <div class="card m-3" style="width: 35rem;">
+                                <div class="content d-flex justify-content-between m-3">
+                                    <h5 class="mb-0 justify-content-start">Covandonga, Asturias</h5>
+                                    <span class="justify-content-end">11/07</span>
+                                </div>
+                                <img src="https://images.pexels.com/photos/17111917/pexels-photo-17111917/free-photo-of-montanas-cielo-punto-de-referencia-romantico.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="fw-bold">204 Likes</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Nesciunt,
+                                        perspiciatis! </p>
+                                </div>
+                            </div>
+                            <!--card 3 -->
+                            <div class="card m-3" style="width: 35rem; ">
+                                <div class="content d-flex justify-content-between m-3">
+                                    <h5 class="mb-0 justify-content-start">Favoryt Place</h5>
+                                    <span class="justify-content-end">12/07</span>
+                                </div>
+                                <img src="https://images.pexels.com/photos/4132600/pexels-photo-4132600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="fw-bold">204 Likes</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Numquam,
+                                        quaerat.. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    </div>
 </body>
 </html>
